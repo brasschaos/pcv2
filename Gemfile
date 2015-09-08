@@ -6,7 +6,7 @@ gem 'rails', '4.1.1'
 
 group :development, :test do
   # For testing
-  gem 'rspec-rails', '~> 3.0.0'
+  gem 'rspec-rails', '~> 3.3.3'
   gem 'factory_girl_rails'
   gem 'capybara'
   gem 'database_cleaner'
