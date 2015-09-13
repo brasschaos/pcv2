@@ -1,6 +1,7 @@
 FactoryGirl.define do
-  factory :user do |f|
-    f.name "Jared"
-    f.active false
+  factory :user do
+    name "Jared"
+    active false
   end
+
 end
