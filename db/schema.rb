@@ -15,7 +15,8 @@ ActiveRecord::Schema.define(version: 20150908042834) do
 
   create_table "users", force: true do |t|
     t.text     "name"
-    t.boolean  "active"
+    t.string   "password_digest"
+    t.boolean  "active",          default: true
     t.datetime "created_at"
     t.datetime "updated_at"
   end
