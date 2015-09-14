@@ -20,28 +20,37 @@ require 'spec_helper'
 # that an instance is receiving a specific message.
 
 RSpec.describe UsersController, type: :controller do
-
   # This should return the minimal set of attributes required to create a valid
   # User. As you add validations to User, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    { name: "Orginal Name" }
+    { name: "Jared",
+      password_digest: "1234567",
+      active: true }
   }
 
   let(:invalid_attributes) {
-    { name: nil }
+    {
+      name: nil,
+      password_digest: nil
+    }
   }
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
   # UsersController. Be sure to keep this updated too.
-  let(:valid_session) { {} }
+  let(:valid_session) {
+    {
+      name: "Jared",
+      password: "wabbit"
+    }
+  }
 
   describe "GET #index" do
     it "assigns all users as @users" do
-      user = User.create! valid_attributes
+      @user = User.create! valid_attributes
       get :index, {}, valid_session
-      expect(assigns(:users)).to eq([user])
+      expect(assigns(:users)).to eq([@user])
     end
   end
 
