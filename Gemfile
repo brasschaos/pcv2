@@ -10,7 +10,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'capybara'
   gem 'database_cleaner'
-  # beacuse spring
+  # because spring
   gem 'spring', '~> 1.3.6'
 end
 
